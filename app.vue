@@ -1,11 +1,6 @@
 <template>
-  <div>
+  <div class="main">
+    <Navbar />
     <NuxtPage />
   </div>
 </template>
-
-<style scoped>
-.div {
-  color: red;
-}
-</style>

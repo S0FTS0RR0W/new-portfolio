@@ -1,4 +1,3 @@
-// ...existing code...
 <template>
   <main class="home container">
     <header class="hero" role="banner" aria-labelledby="hero-title">

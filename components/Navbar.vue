@@ -6,7 +6,7 @@
         <NuxtLink to="/" class="nav-link">Home</NuxtLink>
         <NuxtLink to="/blog" class="nav-link">Blog</NuxtLink>
         <button @click="toggleTheme">
-          {{ isDarkMode ? 'Light' : 'Dark' }}
+          {{ colorMode.preference === 'dark' ? 'Light' : 'Dark' }}
         </button>
       </div>
     </div>
@@ -16,24 +16,19 @@
 <script setup>
 import { ref, onMounted } from 'vue'
 
-const isDarkMode = ref(false)
 const colorMode = useColorMode()
 
 const toggleTheme = () => {
-  isDarkMode.value = !isDarkMode.value
-  colorMode.preference = isDarkMode.value ? 'dark' : 'light'
+  colorMode.preference = colorMode.preference === 'dark' ? 'light' : 'dark'
 }
-
-onMounted(() => {
-  isDarkMode.value = colorMode.preference === 'dark'
-})
 </script>
 
 <style scoped>
 .navbar {
-  background: #fff;
-  border-bottom: 1px solid #e6edf3;
+  background: var(--background-color);
+  border-bottom: 1px solid var(--border-color);
   padding: 14px 0;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -49,22 +44,32 @@ onMounted(() => {
 .brand {
   font-size: 1.2rem;
   font-weight: 700;
-  color: #0f172a;
+  color: var(--text-color);
   text-decoration: none;
 }
 
 .nav-links {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .nav-link {
-  color: #334155;
+  color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
 }
 
 .nav-link:hover {
   color: #0ea5a4;
+}
+
+button {
+  background: var(--background-color);
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 </style>

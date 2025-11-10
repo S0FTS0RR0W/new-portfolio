@@ -107,13 +107,13 @@ const socials = [
 ]
 </script>
 
-<style scoped>
+<style>
 .container {
   max-width: 980px;
   margin: 0 auto;
   padding: 28px 20px;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-  color: #0f172a;
+  color: var(--text-color);
 }
 
 .hero {
@@ -132,13 +132,13 @@ const socials = [
 
 .lead {
   margin: 6px 0 0;
-  color: #334155;
+  color: var(--text-color-secondary);
   font-weight: 600;
 }
 
 .tagline {
   margin: 10px 0 18px;
-  color: #475569;
+  color: var(--text-color-tertiary);
 }
 
 .actions .btn {
@@ -152,18 +152,18 @@ const socials = [
 }
 
 .btn.primary {
-  background: #0ea5a4;
+  background: var(--primary-color);
   color: white;
 }
 
 .btn.ghost {
   background: transparent;
-  border-color: #cbd5e1;
-  color: #0f172a;
+  border-color: var(--button-ghost-border-color);
+  color: var(--text-color);
 }
 
 .profile-card {
-  background: #f8fafc;
+  background: var(--card-background-color);
   border-radius: 8px;
   padding: 14px;
   text-align: left;
@@ -173,7 +173,7 @@ const socials = [
   width: 56px;
   height: 56px;
   border-radius: 8px;
-  background: #0ea5a4;
+  background: var(--primary-color);
   color: #fff;
   display: inline-flex;
   align-items: center;
@@ -187,7 +187,7 @@ const socials = [
   padding: 0;
   margin: 0;
   font-size: 0.9rem;
-  color: #334155;
+  color: var(--text-color-secondary);
 }
 
 .about, .skills, .featured, .contact {
@@ -203,7 +203,7 @@ const socials = [
 }
 
 .skills li {
-  background: #eef2ff;
+  background: var(--skill-background-color);
   padding: 6px 10px;
   border-radius: 999px;
   font-size: 0.9rem;
@@ -216,10 +216,10 @@ const socials = [
 }
 
 .project {
-  border: 1px solid #e6edf3;
+  border: 1px solid var(--border-color);
   padding: 12px;
   border-radius: 8px;
-  background: #fff;
+  background: var(--background-color);
 }
 
 .project h3 {
@@ -227,13 +227,13 @@ const socials = [
 }
 
 .project .desc {
-  color: #475569;
+  color: var(--text-color-tertiary);
   margin: 0 0 8px;
   font-size: 0.95rem;
 }
 
 .project-link {
-  color: #0ea5a4;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
 }
@@ -241,28 +241,28 @@ const socials = [
 .more {
   display: inline-block;
   margin-top: 10px;
-  color: #0f172a;
+  color: var(--text-color);
 }
 
 .contact .email {
   display: inline-block;
   margin: 6px 0 12px;
-  color: #0ea5a4;
+  color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
 }
 
 .socials a {
   margin-right: 10px;
-  color: #334155;
+  color: var(--text-color-secondary);
   text-decoration: none;
 }
 
 .site-footer {
   margin-top: 30px;
   padding-top: 18px;
-  border-top: 1px solid #e6edf3;
-  color: #64748b;
+  border-top: 1px solid var(--border-color);
+  color: var(--text-color-secondary);
   text-align: center;
   font-size: 0.9rem;
 }

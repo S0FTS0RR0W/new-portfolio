@@ -149,6 +149,7 @@ const socials = [
   text-decoration: none;
   font-weight: 600;
   border: 1px solid transparent;
+  transition: all 0.3s ease;
 }
 
 .btn.primary {
@@ -160,6 +161,15 @@ const socials = [
   background: transparent;
   border-color: var(--button-ghost-border-color);
   color: var(--text-color);
+}
+
+.btn.primary:hover {
+  filter: brightness(1.1);
+}
+
+.btn.ghost:hover {
+  background: var(--button-ghost-border-color);
+  color: var(--background-color);
 }
 
 .profile-card {
@@ -220,6 +230,12 @@ const socials = [
   padding: 12px;
   border-radius: 8px;
   background: var(--background-color);
+  transition: all 0.3s ease;
+}
+
+.project:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .project h3 {
@@ -236,12 +252,22 @@ const socials = [
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.project-link:hover {
+  text-decoration: underline;
 }
 
 .more {
   display: inline-block;
   margin-top: 10px;
   color: var(--text-color);
+  transition: all 0.3s ease;
+}
+
+.more:hover {
+  transform: translateX(4px);
 }
 
 .contact .email {
@@ -250,12 +276,22 @@ const socials = [
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.contact .email:hover {
+  text-decoration: underline;
 }
 
 .socials a {
   margin-right: 10px;
   color: var(--text-color-secondary);
   text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.socials a:hover {
+  color: var(--primary-color);
 }
 
 .site-footer {

@@ -58,6 +58,7 @@ const toggleTheme = () => {
   color: var(--text-color);
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease;
 }
 
 .nav-link:hover {
@@ -71,5 +72,6 @@ button {
   padding: 5px 10px;
   cursor: pointer;
   border-radius: 5px;
+  transition: all 0.3s ease;
 }
 </style>

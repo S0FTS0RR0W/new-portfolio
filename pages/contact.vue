@@ -23,5 +23,10 @@ const mailtoLink = `mailto:${email}`
     color: var(--primary-color);
     text-decoration: none;
     font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.email:hover {
+    text-decoration: underline;
 }
 </style>

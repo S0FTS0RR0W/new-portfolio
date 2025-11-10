@@ -7,7 +7,7 @@
         <p class="tagline">Building dependable systems and delightful web experiences — one small tweak at a time.</p>
         <div class="actions">
           <NuxtLink to="/projects" class="btn primary">View Projects</NuxtLink>
-          <a class="btn ghost" :href="mailtoLink">Contact</a>
+          <a class="btn ghost" href="/contact">Contact</a>
         </div>
       </div>
       <div class="hero-aside" aria-hidden="true">

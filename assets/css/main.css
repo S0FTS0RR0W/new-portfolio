@@ -1,0 +1,17 @@
+:root {
+  /* linear gradient for light mode 45 degrees  */
+  --background-color-light: linear-gradient(45deg, #f3f3f3, #e0e0e0);
+  --text-color-light: #000;
+  --background-color-dark: #000;
+  --text-color-dark: #fff;
+}
+
+body {
+  background-color: var(--background-color-light);
+  color: var(--text-color-light);
+}
+
+.dark body {
+  background-color: var(--background-color-dark);
+  color: var(--text-color-dark);
+}

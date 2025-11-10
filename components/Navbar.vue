@@ -5,10 +5,29 @@
       <div class="nav-links">
         <NuxtLink to="/" class="nav-link">Home</NuxtLink>
         <NuxtLink to="/blog" class="nav-link">Blog</NuxtLink>
+        <button @click="toggleTheme">
+          {{ isDarkMode ? 'Light' : 'Dark' }}
+        </button>
       </div>
     </div>
   </nav>
 </template>
+
+<script setup>
+import { ref, onMounted } from 'vue'
+
+const isDarkMode = ref(false)
+const colorMode = useColorMode()
+
+const toggleTheme = () => {
+  isDarkMode.value = !isDarkMode.value
+  colorMode.preference = isDarkMode.value ? 'dark' : 'light'
+}
+
+onMounted(() => {
+  isDarkMode.value = colorMode.preference === 'dark'
+})
+</script>
 
 <style scoped>
 .navbar {
